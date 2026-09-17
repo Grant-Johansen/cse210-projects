@@ -1,5 +1,5 @@
 # cse210-student-template
-Grant Johansen
+Grant Scott Johansen
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
