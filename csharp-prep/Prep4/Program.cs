@@ -26,11 +26,22 @@ class Program
         foreach (int number in numbers)
         {
             listsum += number;
-            if ()
+            if (number < smallestpositivenumber && number > 0)
+            {
+                smallestpositivenumber = number;
+            }
+            if (largestnumber < number)
+            {
+                largestnumber = number;
+            }
         }
 
 
         Console.WriteLine($"Here is the sum: {listsum}");
+        Console.WriteLine($"Here is the largest number: {largestnumber}");
+        Console.WriteLine($"Here is the smallest positive number: {smallestpositivenumber}");
+
+
 
     }
 }
