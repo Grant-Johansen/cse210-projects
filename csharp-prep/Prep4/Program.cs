@@ -8,7 +8,7 @@ class Program
         string usernumber;
         int listsum = 0;
         int listaverage;
-        int smallestpositivenumber;
+        int largestnumber = 0;
 
         List<int> numbers = new List<int>();
         List<int> sortednumnbers = new List<int>();
@@ -22,9 +22,11 @@ class Program
             numbers.Add(inputnumber);
         } while (usernumber != "0");
 
+        int smallestpositivenumber = numbers[1];
         foreach (int number in numbers)
         {
             listsum += number;
+            if ()
         }
 
 
