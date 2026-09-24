@@ -16,7 +16,7 @@ class Program
 
         do
         {
-            Console.WriteLine("Enter number:");
+            Console.WriteLine("Enter number (Enter 0 to stop):");
             usernumber = Console.ReadLine();
             int inputnumber = int.Parse(usernumber);
             numbers.Add(inputnumber);
@@ -26,8 +26,9 @@ class Program
         {
             listsum += number;
         }
-        Console.WriteLine($"The Sum of the numbers is {listsum}");
 
+
+        Console.WriteLine($"Here is the sum: {listsum}");
 
     }
 }
