@@ -48,7 +48,6 @@ listaverage = listsum/(amountinlist);
 Console.WriteLine($"Here is the sum: {listsum}");
 Console.WriteLine($"Here is the largest number: {largestnumber}");
 Console.WriteLine($"Here is the smallest positive number: {smallestpositivenumber}");
-Console.WriteLine(amountinlist);
 Console.WriteLine($"Here is the average of the list: {listaverage}");
 
 
