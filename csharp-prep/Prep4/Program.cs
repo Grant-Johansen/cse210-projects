@@ -2,26 +2,26 @@ using System;
 using System.Globalization;
 
 string usernumber;
-int listsum = 0;
-float listaverage;
+double listsum = 0;
+double listaverage;
 int amountinlist = 0;
 
-List<int> numbers = new List<int>();
+List<double> numbers = new List<double>();
 Console.WriteLine("Enter a list of nubmers, type 0 when finished.");
 
 do
 {
     Console.WriteLine("Enter number (Enter 0 to stop):");
     usernumber = Console.ReadLine();
-    int inputnumber = int.Parse(usernumber);
+    double inputnumber = double.Parse(usernumber);
     numbers.Add(inputnumber);
     amountinlist ++;
 
 } while (usernumber != "0");
 
-int largestnumber = numbers[0];
-int lastnumber = numbers.Count -1;
-foreach (int number in numbers)
+double largestnumber = numbers[0];
+double lastnumber = numbers.Count -1;
+foreach (double number in numbers)
 {
     listsum += number;
     if (number != lastnumber && largestnumber <= number)
@@ -31,9 +31,9 @@ foreach (int number in numbers)
 
 }
 
-int smallestpositivenumber = largestnumber;
+double smallestpositivenumber = largestnumber;
 
-foreach (int number in numbers)
+foreach (double number in numbers)
 {
         if (number > 0 && number <= smallestpositivenumber)
     {
