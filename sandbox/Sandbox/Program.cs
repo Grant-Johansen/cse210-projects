@@ -4,6 +4,10 @@ using System.Runtime.CompilerServices;
 
 class Program
 {
+    static double AddNumbers(double x, int y)
+    {
+        return x + y;
+    }
     static void Main(string[] args)
     {
         // int x =10;
@@ -37,18 +41,20 @@ class Program
         //     done = Console.ReadLine() == "y";
         // } while (! done);
 
-        for(int i =100; i > 0; i-=5)
-        {
-            Console.WriteLine(i);
-        }
+        // for(int i =100; i > 0; i-=5)
+        // {
+        //     Console.WriteLine(i);
+        // }
 
-        List<string> myFriends = new List<string>  {"Bob", "Betty", "Bubba"};
+        // List<string> myFriends = new List<string>  {"Bob", "Betty", "Bubba"};
 
-        myFriends.Add("Doug");
+        // myFriends.Add("Doug");
 
-        foreach(string friend in myFriends)
-        {
-            Console.WriteLine (friend);
-        }
+        // foreach(string friend in myFriends)
+        // {
+        //     Console.WriteLine (friend);
+        // }
+
+
     }
 }
