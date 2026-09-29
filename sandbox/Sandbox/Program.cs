@@ -4,22 +4,31 @@ using System.Runtime.CompilerServices;
 
 class Program
 {
-    static double AddNumbers(double x, int y)
-    {
-        return x + y;
-    }
+    // static double AddNumbers(double x, int y)
+    // {
+    //     return x + y;
+    // }
 
-    static string MyName ()
-    {
-        return "Bob";
-    }
+    // static string MyName ()
+    // {
+    //     return "Bob";
+    // }
 
-    static void DisplayGreeting (string name)
-    {
-        Console.WriteLine($"Welcome {name}, its nice to meet you");
-    }
+    // static void DisplayGreeting (string name)
+    // {
+    //     Console.WriteLine($"Welcome {name}, its nice to meet you");
+    // }
     static void Main(string[] args)
     {
+
+        Circle myCircle = new Circle ();
+
+        myCircle._radius = 10;
+
+        double area = myCircle.GetArea();
+
+        Console.WriteLine(area);
+        
         // int x =10;
         // int y =30;
         // int z =35;
