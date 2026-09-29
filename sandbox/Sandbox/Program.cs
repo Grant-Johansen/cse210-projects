@@ -8,6 +8,16 @@ class Program
     {
         return x + y;
     }
+
+    static string MyName ()
+    {
+        return "Bob";
+    }
+
+    static void DisplayGreeting (string name)
+    {
+        Console.WriteLine($"Welcome {name}, its nice to meet you");
+    }
     static void Main(string[] args)
     {
         // int x =10;
