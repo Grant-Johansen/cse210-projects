@@ -20,9 +20,6 @@ class Menu
             Console.WriteLine("> ");
             input = int.Parse(Console.ReadLine());
 
-            
-        
-
         } 
         return input;
     }
