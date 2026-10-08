@@ -21,6 +21,6 @@ class Menu
             input = int.Parse(Console.ReadLine());
 
         } 
-        return input;
+        return input; 
     }
 }
