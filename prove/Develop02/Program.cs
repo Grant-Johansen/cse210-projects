@@ -8,23 +8,28 @@ class Program
     {
         Menu myMenu = new Menu();
 
-        JournalEntry myEntry = new JournalEntry();
+        Journal myJournal = new Journal();
 
-        myMenu.ProcessMenu();
-        int response = 0;
+        
+
+
+        
+        int response = myMenu.ProcessMenu();
+
+
         while (response !=5)
         {
-
             response = myMenu.ProcessMenu();
+            
             switch (response)
             {
                 case 1:
                     Console.WriteLine("Create");
-                    myEntry.CreateJournalEntry();
+                    myJournal.CreateEntry();
                     break;
                     //Call Create JournalEntry()
                 case 2: 
-                    Console.WriteLine("Display");
+                    myJournal.DisplayJournal();
                     break;
                     //Call DisplayJournal()
                 case 3:
