@@ -1,4 +1,4 @@
-class CreateJournalEntry
+class JournalEntry
 {
     public string _date;
     public string _prompt;
@@ -10,10 +10,16 @@ class CreateJournalEntry
         Console.WriteLine($"{_repsonse}");
     }
 
-    public void CreateEntry()
+    public void CreateJournalEntry()
     {
+        string [] prompts =
+        {
+            "How was your day?",
+            "Talk about someone you met.",
+            "What was something different that happended today?"
+        };
         _date = DateTime.Now.ToString();
-        _prompt = "How was your day?"; //Note that later you must come back and switch this to be a list of prompts that generate randomly.
+        _prompt = prompts [0]; //Note that later you must come back and switch this to be a list of prompts that generate randomly.
         Console.WriteLine($"{_prompt}:");
         _repsonse = Console.ReadLine();
     }
