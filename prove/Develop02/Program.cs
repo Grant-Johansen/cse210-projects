@@ -8,6 +8,8 @@ class Program
     {
         Menu myMenu = new Menu();
 
+        JournalEntry myEntry = new JournalEntry();
+
         myMenu.ProcessMenu();
         int response = 0;
         while (response !=5)
@@ -18,6 +20,7 @@ class Program
             {
                 case 1:
                     Console.WriteLine("Create");
+                    myEntry.CreateJournalEntry();
                     break;
                     //Call Create JournalEntry()
                 case 2: 
