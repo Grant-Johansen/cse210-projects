@@ -1,3 +1,5 @@
+using System.Diagnostics.Contracts;
+
 class JournalEntry
 {
     public string _date;
@@ -5,6 +7,17 @@ class JournalEntry
     public string _response;
     public string _entryQuestion;
     public string _journalEntry;
+
+    public JournalEntry ()
+    {
+        
+    }
+    public JournalEntry(string date, string prompt, string response)
+{
+    _date = date;
+    _prompt = prompt;
+    _response = response;
+}
     public void DisplayJournalEntry ()
     {
         Console.WriteLine($"{_date}, {_prompt}");
