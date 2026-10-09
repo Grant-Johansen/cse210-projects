@@ -40,17 +40,15 @@ class Journal
         {
             string[] parts = line.Split("#");
 
-            string _date = parts[0];
-            string _prompt = parts[1];
-            string _response = parts[2];
+            string date = parts[0];
+            string prompt = parts[1];
+            string response = parts[2];
             
             ​
-            JournalEntry entry = new JournalEntry();
+            JournalEntry entry = new JournalEntry(date, prompt, response);
             
             _entries.Add(entry);
 
-
-        
 
         }
         
