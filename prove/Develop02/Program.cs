@@ -6,6 +6,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        new StreamWriter ("allJournals.txt");
+
         Menu myMenu = new Menu();
 
         Journal myJournal = new Journal();
@@ -32,14 +34,17 @@ class Program
                     //Call DisplayJournal()
                 case 3:
                     Console.WriteLine("Save");
-                    myJournal.ReadFile("allJournals.txt");
+                    Console.WriteLine(Path.GetFullPath("allJournals.txt"));
+                    Console.WriteLine("Case 3 reached");
+                    myJournal.WriteToFile("allJournals.txt");
+                    Console.WriteLine("Case 3 finished");
                     break;
-                    //Call ReadFromFile()
+                    //Call WriteToFile()
                 case 4:              
                     Console.WriteLine("Write");
-                    myJournal.WriteToFile("allJournals.txt"); 
+                    myJournal.ReadFile("allJournals.txt");
                     break;
-                    //Call WriteToFile ()
+                    //Call ReadFile ()
             }  
         }
     }
