@@ -26,15 +26,20 @@ class JournalEntry
 
     public void CreateJournalEntry()
     {
+        Random random = new Random ();
+        int randomprompt = random.Next(1,6);
         string [] prompts =
         {
             "How was your day?",
             "Talk about someone you met.",
-            "What was something different that happended today?"
+            "What was something different that happended today?",
+            "Did anything hard happen today?",
+            "How did you see the hand of the Lord today?",
+            "What are you greatful for today?"
         };
         _date = DateTime.Now.ToString();
-        _prompt = prompts [0]; //Note that later you must come back and switch this to be a list of prompts that generate randomly.
-        Console.WriteLine($"{_prompt}:");
+        _prompt = prompts [randomprompt]; //Note that later you must come back and switch this to be a list of prompts that generate randomly.
+        Console.WriteLine($"{_prompt}");
         _response = Console.ReadLine();
     }
 
