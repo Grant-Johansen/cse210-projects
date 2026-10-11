@@ -6,7 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        new StreamWriter ("allJournals.txt");
+        // 5
 
         Menu myMenu = new Menu();
 
