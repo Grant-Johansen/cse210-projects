@@ -33,11 +33,9 @@ class Program
                     break;
                     //Call DisplayJournal()
                 case 3:
-                    Console.WriteLine("Save");
-                    Console.WriteLine(Path.GetFullPath("allJournals.txt"));
-                    Console.WriteLine("Case 3 reached");
+                    
                     myJournal.WriteToFile("allJournals.txt");
-                    Console.WriteLine("Case 3 finished");
+                
                     break;
                     //Call WriteToFile()
                 case 4:              
