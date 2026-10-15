@@ -9,7 +9,7 @@ class Circle
 
     public Circle (double radius)
     {
-        _radius = radius;
+        SetRadius(radius);
     }
 
 
@@ -18,7 +18,7 @@ class Circle
         return 3.14159 * _radius * _radius;
     }
 
-    public void SetRadius (double radius)
+    private void SetRadius (double radius)
     {
         if (radius < 0)
         {
