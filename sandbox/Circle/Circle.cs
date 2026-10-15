@@ -12,6 +12,11 @@ class Circle
         SetRadius(radius);
     }
 
+      public Circle (int radius)
+    {
+        SetRadius(radius);
+    }
+
 
     public double GetArea()
     {
@@ -30,6 +35,8 @@ class Circle
             _radius = radius; 
         }
     }
+
+
 
 
 
