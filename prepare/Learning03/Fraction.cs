@@ -1,50 +1,71 @@
+using System.Reflection.Metadata.Ecma335;
+
 class Fraction
 {
     private int _top;
     private int _bottom;
     public Fraction()
     {
-        
+        _top = 1;
+
+        _bottom = 1;
     }
 
     public Fraction(int wholeNumber)
     {
-        
+        _top = wholeNumber;
+
+        _bottom = 1;
     }
 
     public Fraction(int top, int bottom)
     {
-        
+        _top = top;
+
+        _bottom = bottom;
     }
 
-    private void GetTop()
+    public int GetTop()
     {
-        
+       
+        return _top;
     }
 
-    private void SetTop(int top)
+    public void SetTop(int top)
     {
-        
+        _top = top;
     }
 
-    private void GetBottom ()
+    public int GetBottom ()
     {
         
+        return _bottom;
     }
+    
 
-    private void SetBottom(int bottom)
+    public void SetBottom(int bottom)
     {
+        if (bottom != 0)
+        {
+        _bottom = bottom;
+        }
+        else
+        {
+            _bottom = 1;
+        }
         
     }
 
     public string GetFractionString()
     {
-        
+        string fractionForm = $"{_top}/{_bottom}";
+        return fractionForm;
     }
 
     public double GetDecimalValue()
     {
-        
+        double decimalForm = (double)_top/(double)_bottom;
+        return decimalForm;
     }
 
 }
