@@ -5,9 +5,9 @@
  static void Main(string[] args)
     {
 
-        Circle myCircle = new Circle ();
+        Circle myCircle = new Circle (10);
 
-        myCircle.SetRadius(10);
+        // myCircle.SetRadius(10);
 
         double area = myCircle.GetArea();
 
