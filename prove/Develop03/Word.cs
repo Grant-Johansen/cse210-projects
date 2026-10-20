@@ -30,11 +30,12 @@ class Word
             {
                 returnString += '_';
             }
-            else
-            {
-                returnString = _word;
-            }
+        } 
+        else
+        {
+            returnString = _word;
         }
+        
         return returnString;
     }
 
