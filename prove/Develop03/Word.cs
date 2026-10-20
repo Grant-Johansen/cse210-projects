@@ -1,3 +1,5 @@
+using System.Web;
+
 class Word
 {
     private string _word;
@@ -21,13 +23,25 @@ class Word
 
     public string GetWordString()
     {
-        return _word;
+        string returnString = "";
+        if(_hidden)
+        {
+            for (int i = 0; i < _word.Length; i ++)
+            {
+                returnString += '_';
+            }
+            else
+            {
+                returnString = _word;
+            }
+        }
+        return returnString;
     }
 
     public void Display ()
     {
-        Console.WriteLine($"{_word}");
+        Console.WriteLine($"{GetWordString()}");
     }
 
-    
+
 }
