@@ -23,6 +23,8 @@ class ScriptureReference
     }
     public void DisplayScriptureReference()
     {
+        Console.WriteLine($"{_bookName} {_chapter}:{_verse[0]}");
+        
         // if (_verse.Count >1)
         // {
         //     Console.WriteLine(ScriptureReference());
