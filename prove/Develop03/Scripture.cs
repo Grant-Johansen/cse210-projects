@@ -38,7 +38,7 @@ class Scripture
         int randomWord = random.Next(1,_words.Count());
         while (_words[randomWord].IsHidden()== true)
         {
-            randomWord = random.Next(1,_words.Count());
+            randomWord = random.Next(0,_words.Count());
         }
         _words[randomWord].Hide();
 
@@ -56,7 +56,7 @@ class Scripture
 
     public int NumberOfHiddenWords()
     {//
-        int numHiddenWords = _words.Count();
+        int numHiddenWords = _words.Count()+1;
         foreach (Word word in _words)
         {
           if (word.IsHidden() == true)
