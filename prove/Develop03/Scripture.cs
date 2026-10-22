@@ -2,13 +2,17 @@ class Scripture
 {
     private List <Word> _words;
     // TODO - ADD scripture Reference
+    private ScriptureReference _reference; 
+
     public Scripture(string name, int chapter, int verse, string text)
     {
         _words = ConvertToWordList(text);
+        _reference = new ScriptureReference(name, chapter, verse); 
     }
     public Scripture (string name, int chapter, int startVerse, int endVerse, string text)
     {
-        
+        _words = ConvertToWordList(text);
+        _reference = new ScriptureReference(name, chapter, startVerse, endVerse); 
     }
     //ADD Scripture ScriputreReference
     // public Scripture (ScriputreReference ref, string text)
@@ -36,10 +40,11 @@ class Scripture
     }
     // public bool HideSomeWords()
     // {
-        
+    //      
     // }
     public void ShowScripture()
     {
+        _reference.DisplayScriptureReference();
         foreach (Word word in _words)
         {
             word.Display();
