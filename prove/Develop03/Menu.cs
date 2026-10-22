@@ -103,15 +103,3 @@ class Menu
 
 }
 
-/************************************************
-* Jeremiah 7:23 "But this thing commanded I them, saying, Obey my voice, and I will be your God, 
-and ye shall be my people: and walk ye in all the ways that I have commanded you, that it may be 
-well unto you."
-* Ecclesiastes 3:1 "To every thing there is a season, and a time to every purpose under the 
-heaven."
-* 1 Corinthians 3:6 "I have planted, Apollos watered; but God gave the increase."
-* Ether 12:37 "And it came to pass that the Lord said unto me: If they have not charity it 
-mattereth not unto thee, thou hast been faithful; wherefore, thy garments shall be made clean. And
-because thou hast seen thy weakness thou shalt be made strong, even unto the sitting down in the 
-place which I have prepared in the mansions of my Father."
-*************************/
