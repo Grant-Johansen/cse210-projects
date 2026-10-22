@@ -23,26 +23,45 @@ class ScriptureReference
     }
     public void DisplayScriptureReference()
     {
-        Console.WriteLine($"{_bookName} {_chapter}:{_verse[0]}");
-        
-        // if (_verse.Count >1)
-        // {
-        //     Console.WriteLine(ScriptureReference());
-        // }
-        // else
-        // {
-            
-        // }
+        if (_verse.Count >1)
+        {
+            Console.WriteLine($"{_bookName} {_chapter}:{_verse[0]}-{_verse[-1]}");
+        }
+        else
+        {
+            Console.WriteLine($"{_bookName} {_chapter}:{_verse[0]}");
+        }
 
     }
 
-    // public string GetScriptureReference()
-    // {
+    public string GetScriptureReference()
+    {
+        Console.WriteLine("What are the verses? Beginning:");
+        String startVerseUser = Console.ReadLine();
+        Console.WriteLine("What is the last verse?(if only one type NONE) Last:");
+        String endVerseUser = Console.ReadLine();
+        if (endVerseUser == "NONE")
+        {
+        string verseSelection = $"{startVerseUser}";
+        return verseSelection; 
+
+        } 
+        else
+        {
+        string verseSelection = $"{startVerseUser}:{endVerseUser}"; 
+        return verseSelection; 
+        }
+        // int startVerse = int.Parse(startVerseUser);
+        // int endVerse = int.Parse(endVerseUser);
         
-    // }
-    // public string GetScriptureReferenceString()
-    // {
         
-    // }
+    }
+    public string GetScriptureReferenceString()
+    {
+        Console.WriteLine("What is the name of the Book in your scripture reference?");
+        String bookName = Console.ReadLine();
+        return bookName;
+
+    }
 
 }
