@@ -4,64 +4,41 @@ class ScriptureReference
 {
     private string _bookName;
     private int _chapter;
-    // private int _verse;
-    private List <int> _verse = new List<int>();
-
+    private int _startVerse;
+    private int _endVerse;
     public ScriptureReference (string name, int chapter, int verse)
     {
         _bookName = name;
         _chapter = chapter;
-        _verse.Add(verse);
+        _startVerse = verse;
+        _endVerse = 0;
     }
     public ScriptureReference (string name, int chapter, int startVerse, int endVerse)
     {
         _bookName = name;
         _chapter = chapter;
-        _verse.Add (startVerse);
-        _verse.Add (endVerse);
+        _startVerse = startVerse;
+        _endVerse = endVerse;
+
 
     }
     public void DisplayScriptureReference()
     {
-        if (_verse.Count >1)
-        {
-            Console.WriteLine($"{_bookName} {_chapter}:{_verse[0]}-{_verse[-1]}");
-        }
-        else
-        {
-            Console.WriteLine($"{_bookName} {_chapter}:{_verse[0]}");
-        }
+        Console.WriteLine(GetScriptureReference());
 
     }
 
     public string GetScriptureReference()
     {
-        Console.WriteLine("What are the verses? Beginning:");
-        String startVerseUser = Console.ReadLine();
-        Console.WriteLine("What is the last verse?(if only one type NONE) Last:");
-        String endVerseUser = Console.ReadLine();
-        if (endVerseUser == "NONE")
+        if (_endVerse !=0)
         {
-        string verseSelection = $"{startVerseUser}";
-        return verseSelection; 
-
-        } 
+            return $"{_bookName} {_chapter}:{_startVerse}-{_endVerse}";
+        }
         else
         {
-        string verseSelection = $"{startVerseUser}:{endVerseUser}"; 
-        return verseSelection; 
+            return $"{_bookName} {_chapter}:{_startVerse}";
         }
-        // int startVerse = int.Parse(startVerseUser);
-        // int endVerse = int.Parse(endVerseUser);
         
         
     }
-    public string GetScriptureReferenceString()
-    {
-        Console.WriteLine("What is the name of the Book in your scripture reference?");
-        String bookName = Console.ReadLine();
-        return bookName;
-
-    }
-
 }
