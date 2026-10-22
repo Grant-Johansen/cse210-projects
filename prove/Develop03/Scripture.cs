@@ -14,13 +14,7 @@ class Scripture
         _words = ConvertToWordList(text);
         _reference = new ScriptureReference(name, chapter, startVerse, endVerse); 
     }
-    //ADD Scripture ScriputreReference
-    // public Scripture (ScriputreReference ref, string text)
-    // {
-        
-    // }
-
-
+    
     /****************************
     * ConverToWordList() - This method will recieve a string paramter,
     * which is a paragraph of text. It will split that text into words 
@@ -38,10 +32,18 @@ class Scripture
         
         return tempWordList;
     }
-    // public bool HideSomeWords()
-    // {
-    //      
-    // }
+    public bool HideSomeWords()
+    {
+        Random random = new Random();
+        int randomWord = random.Next(1,_words.Count());
+        while (_words[randomWord].IsHidden()== true)
+        {
+            randomWord = random.Next(1,_words.Count());
+        }
+        _words[randomWord].Hide();
+
+        return true; 
+    }
     public void ShowScripture()
     {
         _reference.DisplayScriptureReference();
@@ -51,13 +53,18 @@ class Scripture
         }
 
     }
-    // public GetScriputreReference()
-    // {
-        
-    // }
-    // string NumberOfHiddenWords()
-    // {
-        
-    // }
+
+    public int NumberOfHiddenWords()
+    {//
+        int numHiddenWords = _words.Count();
+        foreach (Word word in _words)
+        {
+          if (word.IsHidden() == true)
+          {
+              numHiddenWords -=1; 
+            }
+        }
+        return numHiddenWords;
+    }
 
 }
