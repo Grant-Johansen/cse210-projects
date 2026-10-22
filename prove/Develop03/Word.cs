@@ -41,7 +41,7 @@ class Word
 
     public void Display ()
     {
-        Console.WriteLine($"{GetWordString()}");
+        Console.Write($"{GetWordString()} ");
     }
 
 
