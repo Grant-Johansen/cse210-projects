@@ -1,7 +1,7 @@
 class Scripture
 {
     private List <Word> _words;
-    // TODO - ADD scripture Reference
+    
     private ScriptureReference _reference; 
 
     public Scripture(string name, int chapter, int verse, string text)
@@ -55,7 +55,7 @@ class Scripture
     }
 
     public int NumberOfHiddenWords()
-    {//
+    {
         int numHiddenWords = _words.Count()+1;
         foreach (Word word in _words)
         {
