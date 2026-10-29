@@ -1,7 +1,5 @@
 public class MathAssignment : Assignment
 {
-    private string _studnetName;
-    private string _topic;
     private string _textbookSection;
     private string _problems;
 
