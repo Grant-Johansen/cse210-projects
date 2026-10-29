@@ -6,8 +6,11 @@
 
         // myPerson.GetPersonInformation();
         Console.WriteLine(myPerson.GetPersonInformation());
-        Doctor myDoctor = new Doctor ("Bob", "Payne", 45, 279, "Knife");
+        Doctor myDoctor = new Doctor ("Bob", "Payne", 45, 279, "Gabbel");
+        Police myPolice = new Police ("Greg", "Grim", 51, 181, "Guns");
+
         Console.WriteLine(myDoctor.GetPersonInformation());
         Console.WriteLine(myDoctor.GetDoctorInformation());
+        Console.WriteLine(myPolice.GetPoliceInformation());
     }
 }
