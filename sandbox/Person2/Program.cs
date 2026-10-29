@@ -12,5 +12,31 @@
         Console.WriteLine(myDoctor.GetPersonInformation());
         Console.WriteLine(myDoctor.GetDoctorInformation());
         Console.WriteLine(myPolice.GetPoliceInformation());
+
+        List<Person> myPeople = new List<Person>();
+
+        myPeople.Add(myPerson);
+        myPeople.Add(myDoctor);
+        myPeople.Add(myPolice);
+
+        foreach(Person person in myPeople)
+        {
+            if(person is Doctor doctor)
+            {
+                Console.WriteLine("Doctor");
+                Console.WriteLine(doctor. GetDoctorInformation());
+            }
+            else if (person is Police police)
+            {
+               Console.WriteLine("Police");
+                Console.WriteLine(police. GetPoliceInformation()); 
+            }
+            else
+            {
+                Console.WriteLine(person.GetPersonInformation());
+            }
+            
+        }
+
     }
 }
