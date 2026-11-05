@@ -7,7 +7,7 @@ class BaseActivity
     public void RunCountDownMeassage (string message, int seconds)
     {
         Console.CursorVisible = false;
-        for(int i =5; i>0; i--)
+        for(int i =seconds; i>0; i--)
         {
         Console.Clear();
         Console.WriteLine($"{message} - {i}"); 
