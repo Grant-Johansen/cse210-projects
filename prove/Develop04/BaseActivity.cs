@@ -1,9 +1,28 @@
 class BaseActivity
 {
+    private int _duration; 
+    private DateTime _endTime;
+
     public BaseActivity()
     {
-       // COMPLETE 
+       _duration = 10; // Replace later with call to ObtainDuration() 
     }
+
+    public void StartActivity()
+    {
+        //COMPLETE
+    }
+
+    public void StartTimer()
+    {
+        _endTime = DateTime.Now.AddSeconds(_duration);
+    }
+
+    public bool HasTimerExpiered()
+    {
+        return DateTime.Now > _endTime;
+    }
+
     public void RunCountDownMeassage (string message, int seconds)
     {
         Console.CursorVisible = false;
@@ -15,6 +34,7 @@ class BaseActivity
         }
         Console.CursorVisible = true;
     }
+
     public void RunSpinnerMessage(string mesage, int seconds)
     {
         Console.CursorVisible = false;
