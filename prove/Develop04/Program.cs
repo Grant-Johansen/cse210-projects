@@ -8,7 +8,6 @@ class Program
         // // activity.RunCountDownMeassage("Get Ready", 5);
         // activity.RunSpinnerMessage("Hello", 5);
 
-        BreathingActivity Breath = new BreathingActivity();
-        Breath.RunActivity();
+        
     }
 }

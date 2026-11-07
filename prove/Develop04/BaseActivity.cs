@@ -1,16 +1,21 @@
-class BaseActivity
+public class BaseActivity
 {
+    private string _name;
+    private string _description;
     private int _duration; 
     private DateTime _endTime;
-
-    public BaseActivity()
+    
+    public BaseActivity(string name, string description)
     {
-       _duration = 10; // Replace later with call to ObtainDuration() 
+        _name = name;
+        _description= description;
+        
     }
 
     public void StartActivity()
     {
-        //COMPLETE
+        Console.WriteLine($"Welcome to the {_name} activity! {_description}");
+        ObtainDuration();
     }
 
     public void StartTimer()
@@ -58,4 +63,9 @@ class BaseActivity
         Console.CursorVisible = true; 
     }
 
+    public void ObtainDuration()
+    {
+    Console.WriteLine("How long many seconds would you like to do this activity for?");
+    _duration = int.Parse(Console.ReadLine());
+    }
 }

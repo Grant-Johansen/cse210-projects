@@ -1,18 +1,17 @@
 class BreathingActivity : BaseActivity
 {
 
-    public BreathingActivity(): base()
+    public BreathingActivity(string name, string description): base(name, description)
     {
-        
+        description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
     }
     public void RunActivity()
     {
-        // call StartActivty() method
+        StartActivity();
 
         DateTime endTime = DateTime.Now.AddSeconds(20);
         RunCountDownMeassage("Get Ready", 5);
         StartTimer();
-        // while (DateTime.Now < endTime) //Delete later
         while (! HasTimerExpiered())
         {
             RunCountDownMeassage("Breath in", 4);
