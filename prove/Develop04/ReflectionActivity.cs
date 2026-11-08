@@ -10,12 +10,19 @@ class ReflectionActivity: BaseActivity
     }
     public void RunActivity()
     {
-        Random random = new Random();
-        
-        StartActivity();
+        Random random = new Random ();
+        int randomprompt = random.Next(1,6);
+        FlaggedString CurrentPropmt = _prompts [randomprompt];
+        // _prompt = prompts [randomprompt]; //Note that later you must come back and switch this to be a list of prompts that generate randomly.
+        // Console.WriteLine($"{_prompt}");
 
+        int randomQuestion = random.Next(1,9);
+        FlaggedString CurrentQuestion = _prompts [randomQuestion];
+
+        StartActivity();
         DateTime endTime = DateTime.Now.AddSeconds(20);
-        RunCountDownMeassage("Get Ready", 5);
+        
+        RunCountDownMeassage("Get Ready", 8);
         StartTimer();
         while (! HasTimerExpiered())
         {

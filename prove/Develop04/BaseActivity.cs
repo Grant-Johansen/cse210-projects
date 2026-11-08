@@ -5,6 +5,7 @@ public class BaseActivity
     private int _duration; 
     private DateTime _endTime;
     
+    
     public BaseActivity(string name, string description)
     {
         _name = name;
@@ -16,6 +17,11 @@ public class BaseActivity
     {
         Console.WriteLine($"Welcome to the {_name} activity! {_description}");
         ObtainDuration();
+    }
+    public void EndActivity()
+    {
+        Console.WriteLine($"Thanks for participating in the {_name} activity!");
+        
     }
 
     public void StartTimer()
@@ -63,9 +69,10 @@ public class BaseActivity
         Console.CursorVisible = true; 
     }
 
-    public void ObtainDuration()
+    public int ObtainDuration()
     {
     Console.WriteLine("How long many seconds would you like to do this activity for?");
     _duration = int.Parse(Console.ReadLine());
+    return _duration;
     }
 }

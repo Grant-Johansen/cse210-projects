@@ -17,8 +17,7 @@ class BreathingActivity : BaseActivity
             RunCountDownMeassage("Breath in", 4);
             RunCountDownMeassage("Breath out", 6);
         }
-
-
-        // CALL EndActivity()
+        
+        EndActivity();
     }
 }

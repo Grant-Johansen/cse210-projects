@@ -1,41 +1,21 @@
 class Menu
 {
-    string _userChoice;
+    int input = 0;
 
-    public void MenuOptions()
+    public int MenuOptions()
     {
+        while (input < 1 || input > 5)
+        {
+            
+        
         Console.WriteLine("Type the number of the option you want to do:");
         Console.WriteLine("");
-        Console.WriteLine("1. BaseActivity");
+        Console.WriteLine("1. Breathing Activity");
         Console.WriteLine("2. Listing");
         Console.WriteLine("3. Reflection");
         Console.WriteLine("4. Quit");
-
-        _userChoice = Console.ReadLine();
-
-        while (_userChoice != "4")
-        {
-            if (_userChoice == "1")
-            {
-                //Call Breathing Activity
-            }
-            else if (_userChoice =="2")
-            {
-                //Call Listening Activity
-            }
-            else if (_userChoice =="3")
-            {
-                //Call Reflection Activity 
-            }
-            else if (_userChoice =="4")
-            {
-                Console.WriteLine("Goodbye.");
-            }
-            else
-            {
-                Console.WriteLine("You entered an invalid response, try again.");
-            }
+        input = int.Parse(Console.ReadLine());
         }
-
+    return input;
     }
 }
