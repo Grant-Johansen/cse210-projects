@@ -25,7 +25,7 @@ class ListingActivity : BaseActivity
             Console.ReadLine();
             entries += 1;
         }
-        Console.WriteLine(entries);
+        Console.WriteLine($"You made {entries}!");
         EndActivity();
     }
     public void ResetPromptsUsage()
