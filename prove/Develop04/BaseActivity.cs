@@ -40,16 +40,17 @@ public class BaseActivity
         for(int i =seconds; i>0; i--)
         {
         Console.Clear();
-        Console.WriteLine($"{message} - {i}"); 
+        Console.WriteLine($"{message} - {i}");
         Thread.Sleep(1000);
         }
         Console.CursorVisible = true;
     }
 
-    public void RunSpinnerMessage(string mesage, int seconds)
+    public void RunSpinnerMessage(string message, int seconds)
     {
         Console.CursorVisible = false;
-        // DateTime now = DateTime.Now;
+        Console.Clear();
+        Console.WriteLine($"{message}");
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
         while (DateTime.Now < endTime)
         {
@@ -66,6 +67,7 @@ public class BaseActivity
             Thread.Sleep(200);
             Console.Write("\b");
         }
+        Console.Clear();
         Console.CursorVisible = true; 
     }
 

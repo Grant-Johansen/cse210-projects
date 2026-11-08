@@ -43,7 +43,7 @@ class ReflectionActivity: BaseActivity
         DateTime endTime = DateTime.Now.AddSeconds(20);
         
         
-        RunCountDownMeassage("Get Ready", 6);
+        RunSpinnerMessage("Get Ready", 6);
         StartTimer();
         while (! HasTimerExpiered())
         {
@@ -71,7 +71,8 @@ class ReflectionActivity: BaseActivity
             
             FlaggedString CurrentQuestion = _questions [randomQuestion];
             string printableQuestion = CurrentQuestion.SetHasBeenUsed();
-            RunCountDownMeassage(printableQuestion, 5);
+            RunSpinnerMessage(printableQuestion, 5);
+            
         }
         EndActivity();
     }
