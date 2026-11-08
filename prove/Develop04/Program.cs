@@ -9,7 +9,6 @@ class Program
         // activity.RunSpinnerMessage("Hello", 5);
 
         Menu myMenu = new Menu();
-        // myMenu.MenuOptions();
         int response = 0;
 
         while (response !=5)
@@ -23,6 +22,9 @@ class Program
                  Breath.RunActivity();
                     break;
                 case 2: 
+                ReflectionActivity Reflect = new ReflectionActivity("Reflection Activity","This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
+                    Reflect.SetPromptsAndQuestions();
+                    Reflect.RunActivity();
                     break;
                 case 3:
                     

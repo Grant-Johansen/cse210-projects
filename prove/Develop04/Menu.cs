@@ -11,8 +11,8 @@ class Menu
         Console.WriteLine("Type the number of the option you want to do:");
         Console.WriteLine("");
         Console.WriteLine("1. Breathing Activity");
-        Console.WriteLine("2. Listing");
-        Console.WriteLine("3. Reflection");
+        Console.WriteLine("2. Reflection");
+        Console.WriteLine("3. Listing");
         Console.WriteLine("4. Quit");
         input = int.Parse(Console.ReadLine());
         }

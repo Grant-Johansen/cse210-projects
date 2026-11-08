@@ -2,36 +2,13 @@ class ReflectionActivity: BaseActivity
  {
      private List<FlaggedString> _prompts = new List<FlaggedString>();
      private List<FlaggedString> _questions = new List<FlaggedString>();
-
+    private bool _noQuestions;
 
      public ReflectionActivity(string name, string description): base(name, description)
     {
         description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
     }
-    public void RunActivity()
-    {
-        Random random = new Random ();
-        int randomprompt = random.Next(1,6);
-        FlaggedString CurrentPropmt = _prompts [randomprompt];
-        // _prompt = prompts [randomprompt]; //Note that later you must come back and switch this to be a list of prompts that generate randomly.
-        // Console.WriteLine($"{_prompt}");
 
-        int randomQuestion = random.Next(1,9);
-        FlaggedString CurrentQuestion = _prompts [randomQuestion];
-
-        StartActivity();
-        DateTime endTime = DateTime.Now.AddSeconds(20);
-        
-        RunCountDownMeassage("Get Ready", 8);
-        StartTimer();
-        while (! HasTimerExpiered())
-        {
-            RunCountDownMeassage("Breath in", 4);
-            RunCountDownMeassage("Breath out", 6);
-        }
-        
-        EndActivity();
-    }
     public void SetPromptsAndQuestions()
     {
         _prompts.Add(new FlaggedString("Think of a time when you stood up for someone else.", false));
@@ -51,6 +28,54 @@ class ReflectionActivity: BaseActivity
 
     
     }
+
+ public void RunActivity()
+    {
+        Random random = new Random ();
+        int randomprompt = random.Next(_prompts.Count);
+        FlaggedString CurrentPrompt = _prompts [randomprompt];
+        string printablePrompt = CurrentPrompt.SetHasBeenUsed();
+
+        int randomQuestion;
+        StartActivity();
+        Console.WriteLine(printablePrompt);
+        Thread.Sleep(10000);
+        DateTime endTime = DateTime.Now.AddSeconds(20);
+        
+        
+        RunCountDownMeassage("Get Ready", 6);
+        StartTimer();
+        while (! HasTimerExpiered())
+        {
+            _noQuestions = true;
+            do
+            {   
+                randomQuestion = random.Next(_questions.Count);
+
+                foreach (FlaggedString question in _questions)
+                {
+                    if (!question.GetHasBeenUsed())
+                    {
+                        _noQuestions = false;
+                        break;
+                    }
+                }
+                if (_noQuestions)
+                {
+                    Console.WriteLine("All questions have been given.");
+                }
+
+            }
+            while (_questions[randomQuestion].GetHasBeenUsed());
+            
+            
+            FlaggedString CurrentQuestion = _questions [randomQuestion];
+            string printableQuestion = CurrentQuestion.SetHasBeenUsed();
+            RunCountDownMeassage(printableQuestion, 5);
+        }
+        EndActivity();
+    }
+
     public void ResetPromptsUsage()
     {
         foreach (FlaggedString prompt in _prompts)
