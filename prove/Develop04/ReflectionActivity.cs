@@ -74,6 +74,7 @@ class ReflectionActivity: BaseActivity
             RunSpinnerMessage(printableQuestion, 5);
             
         }
+        ResetPromptsUsage();
         EndActivity();
     }
 

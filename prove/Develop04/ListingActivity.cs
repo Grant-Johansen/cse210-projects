@@ -16,13 +16,14 @@ class ListingActivity : BaseActivity
         StartActivity();
         RunSpinnerMessage("Get Ready to write about a propmt!", 7);
         Console.WriteLine(printablePrompt);
-        Thread.Sleep(10000);
+        Thread.Sleep(3000);
         StartTimer();
         int entries = 0;
+        Console.WriteLine("Begin Writting");
         while (! HasTimerExpiered())
         {
             Console.ReadLine();
-            entries =+ 1;
+            entries += 1;
         }
         Console.WriteLine(entries);
         EndActivity();

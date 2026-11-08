@@ -20,7 +20,7 @@ public class BaseActivity
     }
     public void EndActivity()
     {
-        Console.WriteLine($"Thanks for participating in the {_name} activity!");
+        Console.WriteLine($"Thanks for participating in the {_name}!");
         
     }
 
