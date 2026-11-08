@@ -21,7 +21,10 @@ public class BaseActivity
     public void EndActivity()
     {
         Console.WriteLine($"Thanks for participating in the {_name}!");
-        
+        Menu myMenu = new Menu();
+        int response = 0;
+        response = myMenu.MenuOptions();
+        myMenu.MenuCases(response);
     }
 
     public void StartTimer()

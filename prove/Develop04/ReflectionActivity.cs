@@ -40,8 +40,6 @@ class ReflectionActivity: BaseActivity
         StartActivity();
         Console.WriteLine(printablePrompt);
         Thread.Sleep(10000);
-        DateTime endTime = DateTime.Now.AddSeconds(20);
-        
         
         RunSpinnerMessage("Get Ready", 6);
         StartTimer();
