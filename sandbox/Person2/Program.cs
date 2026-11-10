@@ -2,7 +2,7 @@
 {
     public static void DisplayPersonInformation(Person person)
     {
-        if(person is Person p)
+        // if(person is Person)
             // {
             //     Console.WriteLine("Doctor");
             //     Console.WriteLine(doctor. GetPersonInformation());
@@ -15,7 +15,8 @@
             // else
             // {
             //     Console.WriteLine("Person");
-            Console.WriteLine(p.GetPersonInformation());
+            Console.Write($"Salary: {person.GetSalary()}\n");
+            Console.WriteLine(person.GetPersonInformation());
             // }
     }
     public static void Main()
