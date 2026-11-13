@@ -11,7 +11,7 @@ class Program
         Console.WriteLine(s1.GetColor());
         Console.WriteLine(s1.GetArea());
 
-        Circle s2 = new Circle ("Blue", 5);
+        Circle s2 = new Circle ("Blue", 4);
 
         Console.WriteLine(s2.GetColor());
         Console.WriteLine(s2.GetArea());
