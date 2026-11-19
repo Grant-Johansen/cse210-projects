@@ -8,5 +8,9 @@ class SimpleGoal : BaseGoal
     {
     }
 
-    
+    public override int RecordEvent()
+    {
+        //TO DO!!!
+        return 0;
+    }
 }
