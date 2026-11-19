@@ -25,11 +25,13 @@ public BaseGoal(string name, string description, int points, bool complete, stri
 
     private void SetName()
     {
-        Console.Write("");
+        Console.Write("What is the name of the goal?");
+        _name = Console.ReadLine();
     }
     private void SetDescription()
     {
-        
+        Console.WriteLine($"What is the descrpition for {_name} goal?");
+        _description = Console.ReadLine();
     }
     private void SetPoints()
     {
