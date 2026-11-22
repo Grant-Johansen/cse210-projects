@@ -46,7 +46,7 @@ public BaseGoal(string name, string description, int points, bool complete, stri
         }
     private void SetPoints()
     {
-        Console.Write($"What are the points for {_name} goal? ");
+        Console.WriteLine($"What are the points for {_name} goal? ");
         _points = int.Parse(Console.ReadLine());
     }
     public bool GetStatus()
