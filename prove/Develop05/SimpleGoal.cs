@@ -10,7 +10,8 @@ class SimpleGoal : BaseGoal
 
     public override int RecordEvent()
     {
-        //TO DO!!!
-        return 0;
+        return MarkComplete();
+// for the list goal it needs to see if you hit the bouns as well
+// and it needs to incrament points. 
     }
 }

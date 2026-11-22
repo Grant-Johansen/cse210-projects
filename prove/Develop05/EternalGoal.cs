@@ -1,0 +1,16 @@
+class EternalGoal : BaseGoal
+{
+    public EternalGoal (string name, string description, int points, bool complete, string goalType)
+    :base(name, description, points, complete, goalType)
+    {
+    }
+    public EternalGoal():base ("EternalGoal")
+    {
+    }
+
+    public override int RecordEvent()
+    {
+        // incrament goals in the goals class
+        return GetPoints(); 
+    }
+}

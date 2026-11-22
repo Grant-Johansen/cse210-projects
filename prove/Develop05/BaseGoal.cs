@@ -38,6 +38,10 @@ public BaseGoal(string name, string description, int points, bool complete, stri
         Console.Write($"What are the points for {_name} goal? ");
         _points = int.Parse(Console.ReadLine());
     }
+    public int GetPoints()
+    {
+        return _points; 
+    }
     public virtual string GetConsoleString()
     {
         string completeString = " ";
@@ -53,4 +57,5 @@ public BaseGoal(string name, string description, int points, bool complete, stri
     }
 
     public abstract int RecordEvent();
+
 }
