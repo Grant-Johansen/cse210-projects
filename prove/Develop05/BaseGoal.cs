@@ -22,25 +22,49 @@ public BaseGoal(string name, string description, int points, bool complete, stri
         _complete = false;
         _goalType = goalType;
     }
-
+    public string GetName()
+    {
+        return _name;
+    }
     private void SetName()
     {
         Console.Write("What is the name of the goal?");
         _name = Console.ReadLine();
+    }
+    public string GetDescription()
+    {
+        return _description;
     }
     private void SetDescription()
     {
         Console.WriteLine($"What is the descrpition for {_name} goal?");
         _description = Console.ReadLine();
     }
+    public int GetPoints()
+        {
+            return _points; 
+        }
     private void SetPoints()
     {
         Console.Write($"What are the points for {_name} goal? ");
         _points = int.Parse(Console.ReadLine());
     }
-    public int GetPoints()
+    public bool GetStatus()
     {
-        return _points; 
+        return _complete;
+    }
+    public string GetGoalType()
+    {
+        return _goalType;
+    }
+    public int MarkComplete()
+    {
+        if (_complete)
+    {
+        return 0;
+    }
+        _complete = true;
+        return _points;
     }
     public virtual string GetConsoleString()
     {
@@ -48,14 +72,14 @@ public BaseGoal(string name, string description, int points, bool complete, stri
         if (_complete)
             completeString = "X";
     
-        return $"[{completeString}] {_goalType} Goal Name: {_name}, Description: {_description} points: {_points}";
+        return $"[{completeString}] {_goalType} Goal Name: {_name}, Description: {_description} Points: {_points}";
     }
-    public int MarkComplete()
+    public virtual string GetFileSystemString()
     {
-        _complete = true;
-        return _points;
+        string outputString = "";
+        outputString = $"{_name}#{_description}#{_complete}#{_goalType}#0#0#0";
+        return outputString;
     }
-
     public abstract int RecordEvent();
 
 }
